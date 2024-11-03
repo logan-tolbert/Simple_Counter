@@ -56,6 +56,6 @@ button {
     background-color: darkgreen;
 }
 
-#history {
+#history-container {
     display: none;
 }

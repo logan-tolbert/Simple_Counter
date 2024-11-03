@@ -1,36 +1,29 @@
 let count = 0;
 const counterText = document.getElementById('counter-text');
-const historyContainer = document.getElementById('history');
-const countHistoryText = document.getElementById('count-history');
+const historyContainer = document.getElementById('history-container');
+const historyText = document.getElementById('history-text');
 
 
-const increment = () => {
+const incrementCount = () => {
   count++; 
   counterText.innerText = count; 
 }
 
-const resetCount = () => {
+const resetCounter = () => {
   count = 0;
   counterText.innerText = 0;
 
 }
 
-function saveCount() {
-    let output = ` ${count} - `
-    countHistoryText.innerText += output
+function saveCurrentCount() {
+    let output = ` ${count} - `;
+    historyText.innerText += output;
 }
 
 function showHistory() {
-    if(historyContainer.style.display === 'block') {
-        historyContainer.style.display = 'none'
-        return
-    } else {
-        historyContainer.style.display = 'block'
-        return
+    historyContainer.style.display = (historyContainer.style.display === 'block') ? 'none' : 'block';
     }
-    
-}
 
 function clearHistory() {
-    countHistoryText.innerText = ""
+    historyText.innerText = "";
 }   

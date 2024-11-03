@@ -13,17 +13,17 @@
       <h2 id="counter-text">0</h2>
       <br />
       <div class="button-container">
-        <button id="increment" onclick="increment()">Increment</button>
-        <button id="saveCount" onclick="saveCount()">Save</button>
-        <button id="resetCount" onclick="resetCount()">Reset Count</button>
+        <button id="increment" onclick="incrementCount()">Increment</button>
+        <button id="saveCount" onclick="saveCurrentCount()">Save</button>
+        <button id="resetCount" onclick="resetCounter()">Reset Count</button>
       </div>
       <div>
         <button id="showHistory" onclick="showHistory()">Show/Hide History</button>
         <button id="clearHistory" onclick="clearHistory()">Clear History</button>
       </div>
-      <div id="history">
+      <div id="history-container">
         <h3>History:</h3>
-        <p id="count-history"></p>
+        <p id="history-text"></p>
     </div>
     </div>
     
